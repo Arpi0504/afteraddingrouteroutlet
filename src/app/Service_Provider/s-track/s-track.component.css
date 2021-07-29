@@ -1,0 +1,12 @@
+h2{
+    text-align: center;
+  }
+  .mat-typography{
+    padding-top: 10%;
+  }
+  mat-dialog-actions{
+    justify-content: center;
+  }
+  .mat-dialog-container{
+    border-radius: 18px;
+  }

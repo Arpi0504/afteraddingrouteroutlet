@@ -121,3 +121,7 @@ mat-toolbar {
     gap: 5px;
     width: auto;
   }
+  .example-card{
+    background-image: linear-gradient(#486479, #203647);
+  
+  }

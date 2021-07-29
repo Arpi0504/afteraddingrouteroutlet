@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SAddmemberComponent } from './s-addmember.component';
+import { LeaveProjectComponent } from './leave-project.component';
 
-describe('SAddmemberComponent', () => {
-  let component: SAddmemberComponent;
-  let fixture: ComponentFixture<SAddmemberComponent>;
+describe('LeaveProjectComponent', () => {
+  let component: LeaveProjectComponent;
+  let fixture: ComponentFixture<LeaveProjectComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SAddmemberComponent ]
+      declarations: [ LeaveProjectComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SAddmemberComponent);
+    fixture = TestBed.createComponent(LeaveProjectComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

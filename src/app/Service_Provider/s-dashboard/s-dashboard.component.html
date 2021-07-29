@@ -29,7 +29,7 @@
 
     <img class="avatar mat-elevation-z8" src="../assets/01.jpeg" />
 
-    <h4 class="name">Arpi Patel<button mat-icon-button color="grey" aria-label="Example icon button with a open in new tab icon">
+    <h4 class="name">Arpi Patel<button mat-icon-button color="grey" aria-label="Example icon button with a open in new tab icon" (click)="OpenSDialog()">
       <mat-icon>edit</mat-icon>
     </button></h4>
     <!-- <p class="designation">Software Engineer</p> -->
@@ -39,19 +39,19 @@
     
     <div class="magneto">
       <div class="project-mem">
-        <h3 class="josh">Project Members</h3>
+        <h3 class="josh" style="font-weight: bold;">Current Projects</h3>
         <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" >
           <mat-icon>more_vert</mat-icon>
         </button>
         <mat-menu #menu="matMenu">
-          <button mat-menu-item >
+          <!-- <button mat-menu-item >
             <mat-icon>add_new</mat-icon>
             <span>Add Member</span>
-          </button>
+          </button> -->
           
-          <button mat-menu-item > 
-            <mat-icon>remove</mat-icon >
-            <span>Remove Member</span>
+          <button mat-menu-item  (click)="leaveproject()"> 
+            <mat-icon>exit_to_app</mat-icon >
+            <span>Leave Project</span>
           </button>
         </mat-menu>
       </div>
@@ -60,23 +60,26 @@
         <div>
           <button class="example-button-container" mat-raised-button   >
 
-            <mat-icon>account_circle</mat-icon>
-            Architect
+            <mat-icon aria-hidden="false" aria-label="Example home icon">home
+            </mat-icon>
+            Dream Project
           </button>
           
         </div>
 
         <div>
           <button class="example-button-container" mat-raised-button  >
-            <mat-icon>account_circle</mat-icon>
-            Mason
+            <mat-icon aria-hidden="false" aria-label="Example home icon">home
+            </mat-icon>
+            abc Project
           </button>
         </div>
 
         <div>
           <button class="example-button-container" mat-raised-button  >
-            <mat-icon>account_circle</mat-icon>
-            Painter
+            <mat-icon aria-hidden="false" aria-label="Example home icon">home
+            </mat-icon>
+            xyz Project
           </button>
         </div>
       </div>
@@ -85,7 +88,7 @@
 
 
   <mat-divider></mat-divider>
-  <div class="magneto">
+  <!-- <div class="magneto">
     <div class="project-mem">
       <h3 class="josh">Pending Request</h3>
     </div>
@@ -107,14 +110,31 @@
 
       
     </div>
-  </div>
-
+  </div> -->
+  <mat-card class="example-card" style="color: aliceblue;">
+    <mat-card-header style="text-align: center;">
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title >AP's Home</mat-card-title>
+    </mat-card-header>
+    <mat-card-actions>
+      <button mat-button><mat-icon>check_circle_outline</mat-icon></button>
+      <button mat-button>	<mat-icon>highlight_off</mat-icon></button>
+    </mat-card-actions>
+  </mat-card>
      
 
   </mat-sidenav>
   <mat-sidenav-content>
     <!-- <app-tab></app-tab> -->
-    <app-s-tabs></app-s-tabs>
+    <!-- <app-s-tabs></app-s-tabs> -->
+    <div style="margin-left:1%; ">
+      <mat-tab-group mat-align-tabs="center">
+        <mat-tab label="Chatroom"> <app-s-chatroom></app-s-chatroom></mat-tab>
+        <mat-tab label="Timeline"> <app-s-timeline></app-s-timeline></mat-tab>
+        <mat-tab label="Progress"> <app-s-progress></app-s-progress></mat-tab>
+      </mat-tab-group>
+     
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
 

@@ -47,6 +47,7 @@ import { ServiceproviderinfoComponent } from './components/serviceproviderinfo/s
 import { TabComponent } from './components/tab/tab.component';
 import { TimelineComponent } from './components/timeline/timeline.component';
 import { TrackComponent } from './components/track/track.component';
+import {MatCardModule} from '@angular/material/card';
 
 import { HDashboardComponent} from './House_Owner/h-dashboard/h-dashboard.component';
 import { HAddmemberComponent} from './House_Owner/h-addmember/h-addmember.component';
@@ -62,16 +63,15 @@ import { HTrackComponent} from './House_Owner/h-track/h-track.component';
 import { HMainscreenComponent} from './House_Owner/h-mainscreen/h-mainscreen.component';
 
 import { SDashboardComponent} from './Service_Provider/s-dashboard/s-dashboard.component';
-import { SAddmemberComponent} from './Service_Provider/s-addmember/s-addmember.component';
 import { SChatroomComponent} from './Service_Provider/s-chatroom/s-chatroom.component';
 import { SDialogboxComponent} from './Service_Provider/s-dialogbox/s-dialogbox.component';
 import { SPersonaldetailsComponent} from './Service_Provider/s-personaldetails/s-personaldetails.component';
 import { SProgressComponent} from './Service_Provider/s-progress/s-progress.component';
-import { SRemovememberComponent} from './Service_Provider/s-removemember/s-removemember.component';
 import { STabsComponent} from './Service_Provider/s-tabs/s-tabs.component';
 import { STimelineComponent} from './Service_Provider/s-timeline/s-timeline.component';
 import { STrackComponent} from './Service_Provider/s-track/s-track.component';
 import {SProjectinfoComponent } from './Service_Provider/s-projectinfo/s-projectinfo.component';
+import { LeaveProjectComponent} from './Service_Provider/leave-project/leave-project.component';
 
 @NgModule({
   declarations: [
@@ -99,6 +99,7 @@ import {SProjectinfoComponent } from './Service_Provider/s-projectinfo/s-project
     TabComponent,
     TimelineComponent,
     TrackComponent,
+  
     
     HDashboardComponent,
     HAddmemberComponent,
@@ -114,16 +115,15 @@ import {SProjectinfoComponent } from './Service_Provider/s-projectinfo/s-project
     HMainscreenComponent,
 
     SDashboardComponent,
-    SAddmemberComponent,
     SChatroomComponent,
     SDialogboxComponent,
     SPersonaldetailsComponent,
     SProgressComponent,
-    SRemovememberComponent,
     STabsComponent,
     STimelineComponent,
     STrackComponent,
-    SProjectinfoComponent 
+    SProjectinfoComponent,
+    LeaveProjectComponent
   ],
   imports: [
     AngularMaterialModule,
@@ -137,7 +137,8 @@ import {SProjectinfoComponent } from './Service_Provider/s-projectinfo/s-project
     BrowserAnimationsModule,
     FormsModule,
     FlexLayoutModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatCardModule,
   ],
   providers: [
     AuthService,

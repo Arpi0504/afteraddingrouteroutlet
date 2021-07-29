@@ -5,6 +5,8 @@ import { MatSidenav } from '@angular/material/sidenav';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
+import { SDialogboxComponent } from '../s-dialogbox/s-dialogbox.component';
+import { LeaveProjectComponent} from '../leave-project/leave-project.component';
 
 
 @Component({
@@ -31,7 +33,8 @@ export class SDashboardComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  ngAfterViewInit() {
+  ngAfterViewInit() 
+  {
     this.observer.observe(['(max-width: 800px)']).subscribe((res) => {
       if (res.matches) {
         this.sidenav.mode = 'over';
@@ -42,4 +45,13 @@ export class SDashboardComponent implements OnInit {
       }
     });
   }
+  OpenSDialog() {
+    this.dialog.open(SDialogboxComponent, { height: '100%', width: '100%' });
+  }
+  leaveproject() {
+    this.dialog.open(LeaveProjectComponent , { height: '400px', width: '400px' });
+  }
+ 
 }
+
+

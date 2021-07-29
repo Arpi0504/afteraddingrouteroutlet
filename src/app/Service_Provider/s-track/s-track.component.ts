@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, FormGroup,ReactiveFormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-s-track',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class STrackComponent implements OnInit {
 
-  constructor() { }
+  toppings: FormGroup;
 
-  ngOnInit(): void {
+  constructor(fb: FormBuilder) 
+  {
+    this.toppings = fb.group({
+      pepperoni: false,
+      extracheese: false,
+      mushroom: false
+    });
   }
+    ngOnInit(): void {
+    }
+}  
 
-}
+

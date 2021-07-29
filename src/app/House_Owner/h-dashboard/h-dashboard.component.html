@@ -45,7 +45,7 @@
         </button>
         <mat-menu #menu="matMenu">
           <button mat-menu-item (click)="AddMember()">
-            <mat-icon>add_new</mat-icon>
+            <mat-icon>person_add</mat-icon>
             <span>Add Member</span>
           </button>
           
@@ -122,12 +122,14 @@
           <button class="navbar-brand"(click)="showprogress()">Progress</button> 
         </mat-toolbar>
   </div> -->
-  <mat-tab-group style="padding: 1%;" mat-align-tabs="center" mat-stretched-tabs class="example-stretched-tabs mat-elevation-z4">
-    <mat-tab label="Chatroom"(click)="showchat()"  ><app-h-chatroom ></app-h-chatroom></mat-tab>
-    <mat-tab label="Timeline" (click)="showtimeline()"> <app-h-timeline></app-h-timeline></mat-tab>
-    <mat-tab label="Progress" (click)="showprogress()"> <app-h-progress></app-h-progress> </mat-tab>
-  </mat-tab-group>
-  <div>
+  <div style="margin-left:1%; ">
+    <mat-tab-group mat-align-tabs="center">
+      <mat-tab label="Chatroom"> <app-h-chatroom></app-h-chatroom></mat-tab>
+      <mat-tab label="Timeline"> <app-h-timeline></app-h-timeline></mat-tab>
+      <mat-tab label="Progress"> <app-h-progress></app-h-progress></mat-tab>
+    </mat-tab-group>
+    <div> 
+  </div>
   <!-- <router-outlet></router-outlet> -->
   </div>
   </mat-sidenav-content>

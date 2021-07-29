@@ -1,0 +1,19 @@
+.example-full-width{
+  width: 90%;
+}
+.outer{
+  padding: 2%;
+  background-color:#d9cbf1; 
+  border-radius: 4%;
+}
+.inner{
+  border-radius: 4%;
+}
+.col-sm-6{
+  padding-top: 2%;
+}
+.row{
+  position: relative;
+   margin-right: unset; 
+   margin-left: unset;
+}

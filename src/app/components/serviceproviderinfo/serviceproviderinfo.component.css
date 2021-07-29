@@ -1,0 +1,11 @@
+button {
+  justify-content: center;
+  width: 100px;
+  /* margin-left: 500px; */
+  margin-top: 20px;
+  background: #bbb;
+  /* position: absolute !important;
+  bottom: 15px !important;
+  right: 15px !important; */
+
+}

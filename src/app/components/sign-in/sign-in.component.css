@@ -1,0 +1,14 @@
+.fgtpsw {
+  text-align: right;
+  float: right;
+  font-size: small;
+  /* margin-top: -9px; */
+  padding-bottom: 18px;
+}
+
+.extusr {
+  text-align: left;
+  float: left;
+  margin-top: 11px;
+  /* padding-bottom: 18px; */
+}

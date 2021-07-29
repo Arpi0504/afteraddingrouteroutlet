@@ -1,0 +1,31 @@
+.box {
+  padding-top: 1%;
+  /* padding-right: 10%; */
+  max-width: 100%;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: block;
+  text-decoration: none;
+}
+
+.nav {
+  display: contents;
+  text-decoration: none;
+
+}
+
+.maincontent {
+  padding: 1%;
+
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.nav {
+  color: black;
+  display: contents;
+
+}

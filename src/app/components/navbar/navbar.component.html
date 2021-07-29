@@ -1,0 +1,19 @@
+<div>
+    <mat-toolbar color="primary">
+        <button mat-raised-button routerLink="/dashboard" routerLinkActive="active" color="primary">User
+            Profile</button>
+        <span class="example-spacer"></span>
+
+        <button mat-raised-button routerLink="/add-user" routerLinkActive="active" color="accent">Add User</button>
+        <span class="example-spacer"></span>
+
+        <button mat-raised-button routerLink="/users" routerLinkActive="active" color="accent">Users List</button>
+        <span class="example-spacer"></span>
+
+        <!-- Calling SignOut() Api from AuthService -->
+        <button mat-icon-button color="warn" (click)="authService.SignOut()">
+            <mat-icon>logout</mat-icon>
+        </button>
+
+    </mat-toolbar>
+</div>

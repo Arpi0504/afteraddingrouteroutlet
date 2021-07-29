@@ -1,0 +1,118 @@
+<!-- Owner form -->
+<div class="main-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+        <mat-card-header>
+            <mat-card-title>Register</mat-card-title>
+        </mat-card-header>
+
+        <form [formGroup]="userForm" (ngSubmit)="submitUser()" #resetUserForm="ngForm" novalidate>
+            <div class="form-group">
+                <mat-card-content>
+                    <!-- UID -->
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Your UID</mat-label>
+                        <input matInput type="text" value="User_ID" formControlName="uid" readonly>
+                        <!-- <mat-error *ngIf="handleError('first_name', 'required')">
+                                            <strong>First Name</strong> is Required.
+                                        </mat-error> -->
+                    </mat-form-field>
+
+                    <!-- First name -->
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Enter Your First Name</mat-label>
+                        <input matInput placeholder="First Name" formControlName="first_name" required>
+                        <mat-error *ngIf="handleError('first_name', 'required')">
+                            <strong>Your First Name</strong> is Required.
+                        </mat-error>
+                    </mat-form-field>
+
+                    <!-- Last name -->
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Enter Your Last Name</mat-label>
+                        <input matInput placeholder="Last Name" formControlName="last_name" required>
+                        <mat-error *ngIf="handleError('last_name', 'required')">
+                            <strong>Your Last Name</strong> is Required.
+                        </mat-error>
+                    </mat-form-field>
+
+                    <!-- Contact No. -->
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Enter Your Contact Number</mat-label>
+                        <input matInput formControlName="contact_no" placeholder="Ex. 0123456789" required>
+
+                        <mat-error *ngIf="handleError('contact_no', 'required')">
+                            <strong> 10 digit Contact Number</strong> is Required.
+                        </mat-error>
+                        <mat-error *ngIf="handleError('contact_no', 'pattern')">
+                            Only Numbers are Allowed.
+                        </mat-error>
+                        <mat-error *ngIf="handleError('contact_no', 'minlength')">
+                            <strong>Your Contact Number</strong> must be 10 digit.
+                        </mat-error>
+                    </mat-form-field>
+
+                    <!-- Occupation -->
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Enter Your Occupation</mat-label>
+                        <input matInput placeholder="Your Occupation" formControlName="occupation" required>
+                        <mat-error *ngIf="handleError('occupation', 'required')">
+                            <strong>Your Occupation</strong> is Required.
+                        </mat-error>
+                    </mat-form-field>
+
+                    <!-- Designation -->
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Enter Your Designation</mat-label>
+                        <input matInput placeholder="Your Designation" formControlName="designation" required>
+                        <mat-error *ngIf="handleError('designation', 'required')">
+                            <strong>Your Designation</strong> is Required.
+                        </mat-error>
+                    </mat-form-field>
+
+                    <!-- Your Experiance -->
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Enter Your Experiance in Your Field</mat-label>
+                        <input matInput placeholder="Your Experiance" formControlName="experiance" required>
+                        <mat-error *ngIf="handleError('experiance', 'required')">
+                            <strong>Your Experiance</strong> is Required.
+                        </mat-error>
+                    </mat-form-field>
+
+                    <!-- Your Company Name -->
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Enter Your Company Name</mat-label>
+                        <input matInput placeholder="Your Company Name" formControlName="company_name" required>
+                        <mat-error *ngIf="handleError('company_name', 'required')">
+                            <strong>Your Company Name</strong> is Required.
+                        </mat-error>
+                    </mat-form-field>
+
+                    <!-- Your Company Address -->
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Enter Your Company Address</mat-label>
+                        <input matInput placeholder="Your Company Address" formControlName="comp_address" required>
+                        <mat-error *ngIf="handleError('comp_address', 'required')">
+                            <strong>Your Company Address</strong> is Required.
+                        </mat-error>
+                    </mat-form-field>
+
+                    <!-- Your Website URL -->
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Enter Your Website URL</mat-label>
+                        <input matInput placeholder="Your Website URL" formControlName="web_url" required>
+                        <mat-error *ngIf="handleError('web_url', 'required')">
+                            <strong>URL</strong> is Required.
+                        </mat-error>
+                    </mat-form-field>
+
+                </mat-card-content>
+
+                <div class="Container">
+                    <button mat-flat-button class=" btn btn-success" [disabled]="!userForm.valid"
+                        color="warn">Submit</button>
+                    <button mat-flat-button color="accent" (click)="resetForm()">Clear</button>
+                </div>
+            </div>
+        </form>
+    </mat-card>
+</div>

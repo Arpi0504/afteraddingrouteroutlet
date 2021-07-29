@@ -1,0 +1,45 @@
+<div class="main-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <div class="authBlock">
+        <mat-card class="box">
+            <mat-card-header>
+                <mat-card-title>Sign In</mat-card-title>
+            </mat-card-header>
+
+            <form class="example-form">
+                <mat-card-content>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Enter Your E-mail</mat-label>
+                        <input matInput placeholder="pat@example.com" [formControl]="email" #userName required>
+                        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+
+                        
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Enter Your Password</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'" #userPassword>
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                            [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+
+                    </mat-form-field>
+                    
+                    <div class="fgtpsw">
+                        <a class="" routerLink="/forgot-password" routerLinkActive="active">Forgot Password?</a>
+                    </div>
+                </mat-card-content>
+
+                
+
+                <button mat-stroked-button color="primary" class="btn-block" value="Log in"
+                    (click)="authService.SignIn(userName.value, userPassword.value) ">Log In</button>
+
+
+                <div class="extusr">
+                    Don't have an Account? &nbsp;<a routerLink="/register-user" routerLinkActive="active">Sign Up</a>
+                </div>
+            </form>
+        </mat-card>
+    </div>
+</div>

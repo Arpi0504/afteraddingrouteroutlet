@@ -1,0 +1,29 @@
+<!-- <p>user-role works!</p> -->
+
+<!-- <mat-toolbar color="primary">
+    <button mat-raised-button (click)="authService.TakeUserRole()" color="accent">User Role</button>
+
+    <button mat-raised-button (click)="authService.TakeUserRole()" color="accent">User Role</button>
+
+</mat-toolbar> -->
+
+
+<form>
+        <button type="submit" mat-raised-button (click)="authService.TakeUserRole(10)" color="accent" value="Owner">As Owner</button>
+        
+        <button type="submit" mat-raised-button (click)="authService.TakeUserRole(11)" color="accent" value="serviceProvider">As Service Provider</button>
+
+        <h2>{{authService.UserRole}}</h2>
+
+    <!-- <input [(ngModel)]="userRole">
+    <input [(ngModel)]="userRole"> (submit)="authService.TakeUserRole()" -->
+
+    <!-- <input (keyup)="onKey($event)">
+    <input (keyup)="onKey($event)"> -->
+
+</form>
+<!--
+let playerName: string;
+onSubmit() {
+return this.playerName;
+} -->

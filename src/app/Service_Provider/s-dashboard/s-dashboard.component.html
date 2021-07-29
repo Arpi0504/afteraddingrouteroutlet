@@ -1,0 +1,120 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<mat-toolbar class="mat-elevation-z8">
+  <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+    <mat-icon *ngIf="!sidenav.opened">
+      menu
+    </mat-icon>
+    <mat-icon *ngIf="sidenav.opened">
+      close
+    </mat-icon>
+  </button>
+  <!-- <div class="right">  -->
+  <div class="tlt">Service Provider</div>
+  <!-- <div></div>
+    <div class="logout">
+      <span>
+        <mat-icon matSuffix>power_settings_new</mat-icon>
+      </span>
+    </div>
+  </div> -->
+  <span class="example-spacer"></span>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>power_settings_new</mat-icon>
+  </button>
+
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+
+    <img class="avatar mat-elevation-z8" src="../assets/01.jpeg" />
+
+    <h4 class="name">Arpi Patel<button mat-icon-button color="grey" aria-label="Example icon button with a open in new tab icon">
+      <mat-icon>edit</mat-icon>
+    </button></h4>
+    <!-- <p class="designation">Software Engineer</p> -->
+
+    <mat-divider></mat-divider>
+
+    
+    <div class="magneto">
+      <div class="project-mem">
+        <h3 class="josh">Project Members</h3>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" >
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item >
+            <mat-icon>add_new</mat-icon>
+            <span>Add Member</span>
+          </button>
+          
+          <button mat-menu-item > 
+            <mat-icon>remove</mat-icon >
+            <span>Remove Member</span>
+          </button>
+        </mat-menu>
+      </div>
+      <div class="btns">
+
+        <div>
+          <button class="example-button-container" mat-raised-button   >
+
+            <mat-icon>account_circle</mat-icon>
+            Architect
+          </button>
+          
+        </div>
+
+        <div>
+          <button class="example-button-container" mat-raised-button  >
+            <mat-icon>account_circle</mat-icon>
+            Mason
+          </button>
+        </div>
+
+        <div>
+          <button class="example-button-container" mat-raised-button  >
+            <mat-icon>account_circle</mat-icon>
+            Painter
+          </button>
+        </div>
+      </div>
+    </div>
+  
+
+
+  <mat-divider></mat-divider>
+  <div class="magneto">
+    <div class="project-mem">
+      <h3 class="josh">Pending Request</h3>
+    </div>
+    <div class="btns">
+
+      <div>
+        <button class="example-button-container" mat-raised-button routerLinkActive="active" >
+          <mat-icon>account_circle</mat-icon>
+          Carpenter
+        </button>
+      </div>
+
+      <div>
+        <button class="example-button-container" mat-raised-button >
+          <mat-icon>account_circle</mat-icon>
+          Plumber
+        </button>
+      </div>
+
+      
+    </div>
+  </div>
+
+     
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <!-- <app-tab></app-tab> -->
+    <app-s-tabs></app-s-tabs>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

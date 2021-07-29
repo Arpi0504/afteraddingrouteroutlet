@@ -1,0 +1,73 @@
+<!-- Owner form -->
+<div class="main-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+        <mat-card-header>
+            <mat-card-title>Register</mat-card-title>
+        </mat-card-header>
+
+        <form [formGroup]="userForm" (ngSubmit)="submitUser()" #resetUserForm="ngForm" novalidate>
+            <div class="form-group">
+                <mat-card-content>
+                    <!-- UID -->
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Your UID</mat-label>
+                        <input matInput type="text" value="User_ID" formControlName="uid" readonly>
+                        <!-- <mat-error *ngIf="handleError('first_name', 'required')">
+                                            <strong>First Name</strong> is Required.
+                                        </mat-error> -->
+                    </mat-form-field>
+
+                    <!-- First name -->
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Enter Your First Name</mat-label>
+                        <input matInput placeholder="First Name" formControlName="first_name" required>
+                        <mat-error *ngIf="handleError('first_name', 'required')">
+                            <strong>First Name</strong> is Required.
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <!-- Last name -->
+                        <mat-label>Enter Your Last Name</mat-label>
+                        <input matInput placeholder="Last Name" formControlName="last_name" required>
+                        <mat-error *ngIf="handleError('last_name', 'required')">
+                            <strong>Last Name</strong> is Required.
+                        </mat-error>
+                    </mat-form-field>
+
+                    <!-- Contact No. -->
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Phone Number</mat-label>
+                        <input matInput formControlName="contact_no" placeholder="Ex. 0123456789" required>
+
+                        <!-- <input matInput placeholder="Contact Number" formControlName="contact_no"> -->
+                        <mat-error *ngIf="handleError('contact_no', 'required')">
+                            <strong> 10 digit Contact Number</strong> is Required.
+                        </mat-error>
+                        <mat-error *ngIf="handleError('contact_no', 'pattern')">
+                            Only Numbers are Allowed.
+                        </mat-error>
+                        <mat-error *ngIf="handleError('contact_no', 'minlength')">
+                            Your <strong>Contact Number</strong> must be 10 digit.
+                        </mat-error>
+                    </mat-form-field>
+
+                    <!-- Project name -->
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Project Name" formControlName="project_name" required>
+                        <mat-error *ngIf="handleError('project_name', 'required')">
+                            <strong>Project Name</strong> is Required.
+                        </mat-error>
+                    </mat-form-field>
+
+                </mat-card-content>
+
+                <div class="Container">
+                    <button mat-flat-button class=" btn btn-success" [disabled]="!userForm.valid"
+                        color="warn">Submit</button>
+                    <button mat-flat-button color="accent" (click)="resetForm()">Clear</button>
+                </div>
+            </div>
+        </form>
+    </mat-card>
+</div>

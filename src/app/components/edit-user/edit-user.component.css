@@ -1,0 +1,9 @@
+.Container button {
+  /* You Can Name it what you want*/
+  margin-right: 16px;
+}
+
+.Container button:last-child {
+  margin-right: 0px;
+  /*so the last one dont push the div thas giving the space only between the inputs*/
+}

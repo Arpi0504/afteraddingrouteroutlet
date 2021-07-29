@@ -1,0 +1,30 @@
+<!-- <app-navbar></app-navbar> -->
+
+<div class="main-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()" novalidate>
+        <div class="mb-3">
+            <label>First Name</label>
+            <input formControlName="first_name" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label>Last Name</label>
+            <input formControlName="last_name" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label>Contact No</label>
+            <input formControlName="contact_no" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label>Project Name</label>
+            <input formControlName="project_name" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Update</button>
+        </div>
+    </form>
+</div>

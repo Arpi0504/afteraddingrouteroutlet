@@ -1,0 +1,28 @@
+.divide {
+    margin-top: 10px;
+    padding: 10px;
+  
+  }
+  
+  
+  mat-icon {
+    font-size: 20px;
+  }
+  
+  .particular {
+    margin-top: 10px;
+  }
+  
+  
+  hr.solid {
+    border-top: 3px solid #bbb;
+  }
+  
+  .container {
+    padding: 1%;
+    min-height: auto;
+  }
+  
+  .progress {
+    height: 10px;
+  }

@@ -1,0 +1,100 @@
+<app-navbar></app-navbar>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">UID</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <!-- <th scope="col">E-mail</th> -->
+            <th scope="col">Contact</th>
+            <th scope="col">Project Name</th>
+            <th scope="col">Action </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of Users; let i = index">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ user.uid }}</td>
+            <td>{{ user.first_name }}</td>
+            <td>{{ user.last_name }}</td>
+            <!-- <td>{{ user.email }}</td> -->
+            <td>{{ user.contact_no }}</td>
+            <td>{{ user.project_name }}</td>
+
+            <td>
+                <button (click)="removeUser(user)" class="text-danger">Delete</button> &nbsp;
+                <span routerLink="/edit-user/{{user.uid}}" class="text-primary">Edit</span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<!-- No data message -->
+<!-- <p *ngIf="authService.userData.length <= 0" class="no-data">There is No Data Added Yet!</p> -->
+
+<!-- Books-User list Angular material data table -->
+<!-- <div class="container" *ngIf="authService.userData">
+    <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource">
+
+            <ng-container matColumnDef="uid">
+                <th mat-header-cell *matHeaderCellDef> User ID </th>
+                <td mat-cell *matCellDef="let element"> {{element.uid}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="email">
+                <th mat-header-cell *matHeaderCellDef> User E-mail </th>
+                <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="emailVerified">
+                <th mat-header-cell *matHeaderCellDef> E-mail Verified </th>
+                <td mat-cell *matCellDef="let element"> {{element.emailVerified}} </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+        <table mat-table [dataSource]="dataSource02">
+
+            <ng-container matColumnDef="first_name">
+                <th mat-header-cell *matHeaderCellDef> First Name </th>
+                <td mat-cell *matCellDef="let element"> {{element.first_name}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="last_name">
+                <th mat-header-cell *matHeaderCellDef> Last Name </th>
+                <td mat-cell *matCellDef="let element"> {{element.last_name}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="contact_no">
+                <th mat-header-cell *matHeaderCellDef> Contact Number </th>
+                <td mat-cell *matCellDef="let element"> {{element.contact_no}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="project_name">
+                <th mat-header-cell *matHeaderCellDef> Project Name </th>
+                <td mat-cell *matCellDef="let element"> {{element.project_name}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="action">
+                <th mat-header-cell *matHeaderCellDef> Action </th>
+                <td mat-cell *matCellDef="let element; let i = index;">
+                    <button mat-raised-button color="primary" class="push-right"
+                        [routerLink]="['/edit-user/', element.uid]">Edit</button>
+                    <button mat-raised-button color="accent" (click)="deleteUser(i, element)">Delete</button>
+                </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+    </div>
+</div> -->

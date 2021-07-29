@@ -1,0 +1,50 @@
+<div class="vachche">
+
+    <div class="authBlock">
+
+        <mat-card class="jalsa mat-elevation-z5">
+
+            <mat-card-header>
+                <mat-card-title>Thank You for Registering !</mat-card-title>
+            </mat-card-header>
+
+            <mat-card-content>
+
+                <div *ngIf="authService.userData as user">
+
+                    <mat-card-subtitle>We have Sent a Confirmation E-mail to
+                        <strong>{{user.email}}</strong>.
+                    </mat-card-subtitle>
+                    <mat-card-subtitle>Please check your E-mail and click on the <strong>Link</strong> to verfiy
+                        your E-mail address.</mat-card-subtitle>
+                </div>
+
+                <!-- Calling SendVerificationMail() method using authService Api -->
+
+                <button mat-raised-button color="accent" (click)="authService.SendVerificationMail()">
+                    Resend Verification Email
+                </button>
+                
+                <br>
+                <br>
+
+                <div *ngIf="authService.userData as user">
+
+                    <mat-card-title>After Verifying your E-mail Please Click <strong> Next </strong>
+                        <br> and Fill up the <strong>Form </strong>in Next Page.
+                    </mat-card-title>
+                    <mat-card-subtitle>Please Press <strong> NEXT</strong>.</mat-card-subtitle>
+                </div>
+
+                <button mat-raised-button color="accent" routerLink="/user-role" routerLinkActive="active">
+                    NEXT
+                </button>
+
+            </mat-card-content>
+
+            <!-- <mat-card-footer>
+                Goto <a class="redirect" routerLink="/sign-in"> Sign in</a> ?
+            </mat-card-footer> -->
+        </mat-card>
+    </div>
+</div>

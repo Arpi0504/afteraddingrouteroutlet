@@ -1,0 +1,22 @@
+.example-full-width{
+  width: 100%;
+}
+.outer{
+  padding: 2%;
+  background-color:#d9cbf1; 
+  border-radius: 4%;
+}
+.inner{
+  border-radius: 4%;
+}
+.col-sm-6{
+  padding: none;
+}
+.row{
+  position: relative;
+   margin-right: unset; 
+   margin-left: unset;
+}
+mat-card{
+   width: 100%;
+}

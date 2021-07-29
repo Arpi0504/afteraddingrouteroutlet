@@ -1,0 +1,17 @@
+<h2 mat-dialog-title> Current Members </h2>
+
+<mat-divider></mat-divider>
+<mat-dialog-content class="mat-typography">
+    <label id="example-radio-group-label">Select the member which is to remove </label>
+    <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group"
+        [(ngModel)]="favoriteSeason">
+        <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+            {{season}}
+        </mat-radio-button>
+    </mat-radio-group>
+    <!-- <div>Your favorite season is: {{favoriteSeason}}</div> -->
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-raised-button mat-dialog-close>Remove</button>
+
+</mat-dialog-actions>

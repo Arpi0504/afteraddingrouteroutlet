@@ -1,0 +1,25 @@
+.width{
+    max-width: 100%;
+    width: 100%;
+    text-align: left;
+    padding: 0%;
+  }
+  .container{
+    padding: 0%;
+  }
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+  .mrg{
+    margin-bottom: 0;
+  }
+  .pad{
+      padding-bottom: 5px;
+     
+  }
+  
+
+  .mat-card{
+    padding: 1%;
+  }
